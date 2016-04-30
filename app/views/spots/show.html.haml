@@ -1,0 +1,7 @@
+%h1 Spot chat
+#messages
+  = render @messages
+
+%form
+  %label Say here:
+  %input{ type: :text, data: { behavior: 'room_speaker' }}
