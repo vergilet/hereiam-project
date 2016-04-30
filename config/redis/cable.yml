@@ -1,5 +1,5 @@
 production:
-  urls: redis://:redis_password@pub-redis-11137.us-west-2-1.1.ec2.garantiadata.com:11137
+  urls: redis://hereiam:redis_password@pub-redis-11137.us-west-2-1.1.ec2.garantiadata.com:11137
   host: pub-redis-11137.us-west-2-1.1.ec2.garantiadata.com
   port: 11137
   password: redis_password
