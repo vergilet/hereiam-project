@@ -33,6 +33,7 @@ gem 'material_kit', '~> 1.0', '>= 1.0.0.2'
 
 gem 'quiet_assets', group: :development
 gem 'haml-rails'
+gem 'redis'
 
 
 group :development, :test do
