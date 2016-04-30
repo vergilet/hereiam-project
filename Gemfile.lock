@@ -134,6 +134,7 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    redis (3.3.0)
     ruby_parser (3.8.1)
       sexp_processor (~> 4.1)
     sass (3.4.22)
@@ -188,6 +189,7 @@ DEPENDENCIES
   puma (~> 3.0)
   quiet_assets
   rails (>= 5.0.0.beta4, < 5.1)
+  redis
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
