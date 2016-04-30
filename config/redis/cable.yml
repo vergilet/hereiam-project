@@ -1,3 +1,9 @@
-production:
-  url: redis://hereiam:redis_password@pub-redis-11137.us-west-2-1.1.ec2.garantiadata.com:11137
+# Action Cable uses Redis to administer connections, channels, and sending/receiving messages over the WebSocket.
+development:
+  url: redis://localhost:6379/4
 
+test:
+  url: redis://localhost:6379/3
+
+production:
+  url: redis://:redis_password@pub-redis-11137.us-west-2-1.1.ec2.garantiadata.com:11137
