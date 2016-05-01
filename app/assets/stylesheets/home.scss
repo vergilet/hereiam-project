@@ -87,7 +87,6 @@ $iconColorThird: #52CC52;
       p {
         display: inline-block;
         text-align: center;
-        padding: 10px;
         font: 14px roboto;
         color: #EEE;
         vertical-align: middle;
@@ -95,8 +94,12 @@ $iconColorThird: #52CC52;
         &.top {
           text-transform: uppercase;
           font-weight: bold;
+          padding-left: 10px;
+          padding-top: 10px;
         }
-        &.description {}
+        &.description {
+          padding-left: 10px;
+        }
       }
     }
     .ok-dialog {
