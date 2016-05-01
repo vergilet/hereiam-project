@@ -1,0 +1,159 @@
+- content_for :features, "landing-page"
+- content_for :class, "landing-page"
+%nav.navbar.navbar-transparent.navbar-absolute
+  .container
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#navigation-example", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "http://www.creative-tim.com"} Creative Tim
+    #navigation-example.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a.btn{:href => "../components-documentation.html", :target => "_blank"}
+            Components
+        %li
+          %a.btn{:href => "http://www.creative-tim.com/product/material-kit", :target => "_blank"}
+            Download
+        %li
+          %a.btn.btn-simple{:href => "https://twitter.com/CreativeTim", :target => "_blank"}
+            %i.fa.fa-twitter
+        %li
+          %a.btn.btn-simple{:href => "https://www.facebook.com/CreativeTim", :target => "_blank"}
+            %i.fa.fa-facebook-square
+        %li
+          %a.btn.btn-simple{:href => "https://www.instagram.com/CreativeTimOfficial", :target => "_blank"}
+            %i.fa.fa-instagram
+.wrapper
+  .header.header-filter{:style => "background-image: url('https://images.unsplash.com/photo-1423655156442-ccc11daa4e99?crop=entropy&dpr=2&fit=crop&fm=jpg&h=750&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1450');"}
+    .container
+      .row
+        .col-md-6
+          %h1.title Write the best title for your page.
+          %h4 Every landing page needs a small description after the big bold title, that's why we added this text here. Add here all the information that can make you or your product create the first impression.
+          %br/
+          %a.btn.btn-danger.btn-raised.btn-lg{:href => "https://www.youtube.com/watch?v=dQw4w9WgXcQ"}
+            %i.fa.fa-play
+            Watch video
+  .main.main-raised
+    .container
+      .section.text-center.section-landing
+        .row
+          .col-md-8.col-md-offset-2
+            %h2.title Let's talk product
+            %h5.description This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. Add a button if you want the user to see more.
+        .features
+          .row
+            .col-md-4
+              .feature.feature-primary
+                %i.material-icons chat
+                %h4.title First Feature
+                %p.description Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.
+            .col-md-4
+              .feature.feature-success
+                %i.material-icons verified_user
+                %h4.title Second Feature
+                %p.description Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.
+            .col-md-4
+              .feature.feature-danger
+                %i.material-icons fingerprint
+                %h4.title Third Feature
+                %p.description Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.
+      .section.text-center
+        %h2.title Here is our team
+        .team
+          .row
+            .col-md-4
+              .team-player
+                = image_tag("material_kit/avatar.jpg", alt: "Thumbnail Image", class: "img-raised img-circle")
+                %h4.title
+                  Gigi Hadid
+                  %br/
+                  %small.text-muted Model
+                %p.description
+                  You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                  %a{:href => "#"} links
+                  for people to be able to follow them outside the site.
+                %a.btn.btn-just-icon{:href => "#pablo"}
+                  %i.fa.fa-twitter
+                %a.btn.btn-just-icon{:href => "#pablo"}
+                  %i.fa.fa-instagram
+                %a.btn.btn-just-icon.btn-default{:href => "#pablo"}
+                  %i.fa.fa-facebook-square
+            .col-md-4
+              .team-player
+                = image_tag("material_kit/christian.jpg", alt: "Thumbnail Image", class: "img-raised img-circle")
+                %h4.title
+                  Christian Louboutin
+                  %br/
+                  %small.text-muted Designer
+                %p.description
+                  You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                  %a{:href => "#"} links
+                  for people to be able to follow them outside the site.
+                %a.btn.btn-just-icon{:href => "#pablo"}
+                  %i.fa.fa-twitter
+                %a.btn.btn-just-icon{:href => "#pablo"}
+                  %i.fa.fa-linkedin
+            .col-md-4
+              .team-player
+                = image_tag("material_kit/kendall.jpg", alt: "Thumbnail Image", class: "img-raised img-circle")
+                %h4.title
+                  Kendall Jenner
+                  %br/
+                  %small.text-muted Model
+                %p
+                  You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                  %a{:href => "#"} links
+                  for people to be able to follow them outside the site.
+                %a.btn.btn-just-icon{:href => "#pablo"}
+                  %i.fa.fa-google-plus
+                %a.btn.btn-just-icon{:href => "#pablo"}
+                  %i.fa.fa-youtube-play
+                %a.btn.btn-just-icon.btn-default{:href => "#pablo"}
+                  %i.fa.fa-twitter
+      .section.landing-section
+        .row
+          .col-md-8.col-md-offset-2
+            %h2.text-center.title Work with us
+            %h4.text-center.description Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will responde get back to you in a couple of hours.
+            %form.contact-form
+              .row
+                .col-md-6
+                  .form-group.label-floating
+                    %label.control-label Your Name
+                    %input.form-control{:type => "email"}/
+                .col-md-6
+                  .form-group.label-floating
+                    %label.control-label Your Email
+                    %input.form-control{:type => "email"}/
+              .form-group.label-floating
+                %label.control-label Your Messge
+                %textarea.form-control{:rows => "4"}
+              .row
+                .col-md-4.col-md-offset-4.text-center
+                  %button.btn.btn-primary.btn-raised
+                    Send Message
+  %footer.footer
+    .container
+      %nav.pull-left
+        %ul
+          %li
+            %a{:href => "http://www.creative-tim.com"}
+              Creative Tim
+          %li
+            %a{:href => "http://presentation.creative-tim.com"}
+              About Us
+          %li
+            %a{:href => "http://blog.creative-tim.com"}
+              Blog
+          %li
+            %a{:href => "http://www.creative-tim.com/license"}
+              Licenses
+      .copyright.pull-right
+        © 2016, made with
+        %i.fa.fa-heart.heart
+        by Creative Tim

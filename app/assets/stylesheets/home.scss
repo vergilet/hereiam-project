@@ -1,0 +1,145 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.marker_container {
+  width: 45px;
+  height: 45px;
+  border-radius: 50% 50% 50% 0%;
+  background: #00cae9;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -30px 0 0 -30px;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 1px 5px 2px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow:   3px 1px 5px 2px rgba(50, 50, 50, 0.4);
+  box-shadow:         3px 1px 5px 2px rgba(50, 50, 50, 0.4);
+
+}
+
+.marker_container:after {
+  content: "";
+  width: 38px;
+  height: 38px;
+  margin: 4px 0px 0px 4px;
+  background: white;
+  border: 1px solid #00caff;
+  position: absolute;
+  border-radius: 50%;
+  background-image: url('http://www.wpclipart.com/recreation/cycling/bicycles/plain_bicycle_icon_large.png');
+  background-size: 90%;
+  background-repeat: no-repeat;
+  -webkit-transition: rotate(-45deg);
+  -webkit-transform: rotate(45deg);
+  background-position: 1px 5px;
+}
+
+
+/* Variable declaration */
+$iconColorOne: #CCCC52;
+$iconColorTwo: #CC5252;
+$iconColorThird: #52CC52;
+
+/* Modal overlay styling */
+#overlay {
+  display: none;
+  z-index: 5;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width:100%;
+  height:100%;
+  #screen {
+    width:100%;
+    height:100%;
+    background-color: #000;
+    opacity: 0.5;
+  }
+  .dialog {
+    z-index: 10;
+    display: none;
+    position: absolute;
+    margin: auto;
+    top: 0; right: 0; bottom: 0; left: 0;
+    height: 100px;
+    width: 500px;
+    background-color: #777;
+    .label-dialog {
+      float: left;
+      height: 100px;
+      width: 100px;
+      background-color: #444;
+      text-align: center;
+      vertical-align: top;
+      .material-icons {
+        line-height: 100px;
+        font-size: 60px;
+        color: #333;
+      }
+    }
+    .body-dialog {
+      float: left;
+      height: 100px;
+      width: 350px;
+      p {
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        font: 14px roboto;
+        color: #EEE;
+        vertical-align: middle;
+        span { font-weight: 700; }
+        &.top {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        &.description {}
+      }
+    }
+    .ok-dialog {
+      float: left;
+      height: 100px;
+      width: 50px;
+      background-color: #333;
+      text-align: center;
+      vertical-align: top;
+      .material-icons {
+        line-height: 100px;
+        font-size: 30px;
+        color: #EEE;
+      }
+      &:hover {
+        background-color: #555;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #dialog-star {
+    .label-dialog .material-icons { color: $iconColorOne; }
+    .ok-dialog {
+      .close {
+        float: none;
+        height: 50px;
+        background-color: $iconColorTwo;
+        .material-icons {
+          line-height: 50px;
+        }
+        &:hover { background-color: saturate($iconColorTwo, 15%); }
+      }
+
+      .join {
+        float: none;
+        height: 50px;
+        background-color: $iconColorThird;
+        .material-icons {
+          line-height: 50px;
+        }
+        &:hover { background-color: saturate($iconColorThird, 15%); }
+      }
+    }
+  }
+}
