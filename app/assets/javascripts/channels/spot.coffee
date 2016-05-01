@@ -1,4 +1,4 @@
-return null;
+return null if $('#map').length
 App.spot = App.cable.subscriptions.create { channel: "SpotChannel", spot_id: location.pathname.replace('/spots/', '') },
   connected: (data) ->
     # Called when the subscription is ready for use on the server
