@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   get 'home/map' => 'home#map'
-  get 'home/index' => 'home#index'
+
+  get 'spots' => 'spots#show'
+  get '/spots/:id', to: 'spots#show', as: 'spot'
 
   root to: 'home#index'
 

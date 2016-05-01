@@ -1,7 +1,7 @@
 # Be sure to restart your server when you modify this file. Action Cable runs in a loop that does not support auto reloading.
 class SpotChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "room_channel"
+    stream_from "spot_channel_#{spot.id}"
   end
 
   def unsubscribed
@@ -9,7 +9,12 @@ class SpotChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    # ActionCable.server.broadcast 'room_channel', message: data['message']
-    Message.create!(content: data['message'])
+    spot.messages.create!(content: data['message'])
+  end
+
+  private
+
+  def spot
+    @spot ||= Spot.find_by_id(params[:spot_id])
   end
 end
