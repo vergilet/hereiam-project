@@ -41,24 +41,8 @@ class RichMarkerBuilder extends Gmaps.Google.Builders.Marker #inherit from built
     markers = handler.addMarkers(markers)
     handler.bounds.extendWith(markers)
     handler.fitMapToBounds()
+    new DialogMessage()
+    googleMapsListener = new GoogleMapsListener(handler)
+    googleMapsListener.zoom_changed()
 
-    setTimeout ->
-      modal = {}
-
-      modal.hide = ->
-        $('#overlay').fadeOut()
-        $('.dialog').fadeOut()
-      $('.marker_container').click ->
-        modal.id = '#dialog-star'
-        $('#overlay').fadeIn()
-        $(modal.id).fadeIn()
-      $('.ok-dialog').click ->
-        modal.hide()
-      $('#overlay').click ->
-        if $(modal.id).hasClass('modal')
-        else
-          modal.hide()
-      $('.dialog').click ->
-        event.stopPropagation()
-    , 1000
 
