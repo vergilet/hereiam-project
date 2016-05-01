@@ -14,3 +14,34 @@
  *= require_tree .
  *= require_self
  */
+
+html, body, .wrapper, .container, .main {
+    height: 100%;
+}
+
+.sidebar {
+    background: green;
+}
+
+.main {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.container {
+    width: 100%!important;
+    height: calc(100% - 80px);
+    padding: 15px!important;
+}
+
+.main > .header {
+    height: 80px;
+}
+
+.navbar {
+    border-radius: 0px!important;
+    box-shadow: none!important;
+}
+.main-raised {
+    margin: 0!important;
+    padding: 15px;
+}
