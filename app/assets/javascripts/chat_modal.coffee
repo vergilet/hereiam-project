@@ -1,5 +1,5 @@
-class ChatModal
-  
-  open_chat: () ->
-    $('#chatModal').modal()
-    
+#class ChatModal
+#  
+#  open_chat: () ->
+#    $('#chatModal').modal('show')
+#    

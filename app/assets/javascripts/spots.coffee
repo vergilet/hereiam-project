@@ -15,8 +15,8 @@ class RichMarkerBuilder extends Gmaps.Google.Builders.Marker #inherit from built
 
   create_infowindow: ->
     return null unless _.isString @args.infowindow
-    $('#dialog-star').find('.body-dialog p.top').html(@args.title)
-    $('#dialog-star').find('.body-dialog p.description').html(@args.infowindow)
+    $('#wardModal').find('h4.modal-title').html(@args.title)
+    $('#wardModal').find('.modal-body').html(@args.infowindow)
     return null
 
 @buildMap = (markers) ->

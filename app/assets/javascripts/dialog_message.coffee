@@ -11,17 +11,7 @@ class @DialogMessage
 
   bind: ->
     $('.marker_container').click ->
-      modal.id = '#dialog-star'
-      $('#overlay').fadeIn()
-      $(modal.id).fadeIn()
-      $('.ok-dialog').click ->
-        modal.hide()
-      $('#overlay').click ->
-        if $(modal.id).hasClass('modal')
-        else
-          modal.hide()
-      $('.dialog').click ->
-        event.stopPropagation()
+      $('#wardModal').modal('show')
 
   bindWithTimeout: ->
     setTimeout =>
