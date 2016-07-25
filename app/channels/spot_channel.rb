@@ -1,7 +1,7 @@
 # Be sure to restart your server when you modify this file. Action Cable runs in a loop that does not support auto reloading.
 class SpotChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "spot_channel_#{spot.id}"
+    stream_from "spot_channel_#{spot.try(:id)}"
   end
 
   def unsubscribed

@@ -13,25 +13,11 @@ class RichMarkerBuilder extends Gmaps.Google.Builders.Marker #inherit from built
     marker.setAttribute 'class', 'marker_container'
     { content: marker }
 
-  # override method
   create_infowindow: ->
     return null unless _.isString @args.infowindow
     $('#dialog-star').find('.body-dialog p.top').html(@args.title)
     $('#dialog-star').find('.body-dialog p.description').html(@args.infowindow)
     return null
-
-#    boxText = document.createElement("div")
-#    boxText.setAttribute('class', 'marker_container') #to customize
-#    boxText.innerHTML = @args.infowindow
-#    @infowindow = new InfoBox(@infobox(boxText))
-#
-#  # add @bind_infowindow() for < 2.1
-#
-#  infobox: (boxText)->
-#    content: boxText
-#    pixelOffset: new google.maps.Size(-140, 0)
-#    boxStyle:
-#      width: "280px"
 
 @buildMap = (markers) ->
   handler = Gmaps.build 'Google', { builders: { Marker: RichMarkerBuilder} } #dependency injection
